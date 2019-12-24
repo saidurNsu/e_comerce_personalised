@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>
+         img {
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+         }
+         h1 {
+         color: green;
+         text-align: center;
+         background-color:Tomato;
+         }
+         p {
+         text-align: center;
+         font-family: verdana;
+         font-size: 20px;
+         }
+         /*#myBlueDiv {
+         -webkit-align-self: center; /* Safari 7.0+ */
+         align-self: center;
+         }
+         */
+      </style>
+   </head>
+   <body bgcolor="#E6E6FA">
+      <div align= "center">
+         <h1> welcome to Dynamic solutions</h1>
+         <a href= "https://github.com/saidurNsu" style="color : tomato">learn more about us!  </a> <br>
+         <br>
+         <p style="color : orange"> A place suited for your every tech related needs! <br></p>
+         <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="GD-31829.jpeg" alt="Founder of our company!";>
+         <div id="app1" align="center">
+            {{message}}
+            <p1> <br>
+               <button onclick="myFunction()">Click to find the deatails!</button>
+            </p1>
+            <br>
+         </div>
+         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+         <a href="https://www.linkedin.com/in/saidur-rahman-sabbir-3870a5a1/">https://www.linkedin.com/in/saidur-rahman-sabbir-3870a5a1/</a>
+         <h2>check out today's date</h2>
+         <button type="button"
+            onclick="document.getElementById('demo').innerHTML = Date()">
+         Click to display Date and Time.</button>
+         <p id="demo">
+
+
+
+         
+         <p id="demo1">Turn the size of your business up!</p>
+         <button type="button" onclick="document.getElementById('demo1').style.fontSize='35px'">get bigger texts!</button>
+      </div>
+      <script>
+         function bigImg(x) {
+           x.style.height = "664px";
+           x.style.width = "564px";
+         }
+         
+         function normalImg(x) {
+           x.style.height = "332px";
+           x.style.width = "432px";
+         }
+         
+         var myObject = new Vue({
+           el: '#app1',
+           data: {message: 'welcome!'}
+         
+         })
+         
+         function myFunction() {
+             myObject.message = "Md. Saidur Rahman";
+             myObject.message.fontcolor= "red";
+         }
+         
+         function validateForm() {
+           var x = document.forms["myForm"]["fname"].value;
+           if (x == "") {
+             alert("Name must be filled out");
+             return false;
+           }
+         }
+         
+         var person = {firstName:"saidur", lastName:"Rahman", age:50, eyeColor:"blue"}
+         
+         var x = person;
+         x.age = 26;
+         
+         document.getElementById("demo").innerHTML =
+         person.firstName + " is " + person.age + " years old.";
+         
+         
+         
+         
+         
+      </script>
+
+<script src="my_script.js"> 
+<form name="myForm" action="" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+         </form>
+</p>
+
+ </script>
+
+
+
+   </body>
+</html>
